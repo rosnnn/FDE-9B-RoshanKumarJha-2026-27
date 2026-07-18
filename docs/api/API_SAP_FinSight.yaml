@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: FDE-9B SAP to FinSight Integration API
+  version: 1.0.0
+paths:
+  /src/gl: { get: { summary: SRC-001 General Ledger Extract, responses: { '200': { description: ok } } } }
+  /src/ap: { get: { summary: SRC-002 Accounts Payable Extract, responses: { '200': { description: ok } } } }
+  /src/ar: { get: { summary: SRC-003 Accounts Receivable Extract, responses: { '200': { description: ok } } } }
+  /src/cost-centre: { get: { summary: SRC-004 Cost Centre Extract, responses: { '200': { description: ok } } } }
+  /src/profit-centre: { get: { summary: SRC-005 Profit Centre Extract, responses: { '200': { description: ok } } } }
+  /src/material-ledger: { get: { summary: SRC-006 Material Ledger Extract, responses: { '200': { description: ok } } } }
+  /src/purchase-orders: { get: { summary: SRC-007 Purchase Orders Extract, responses: { '200': { description: ok } } } }
+  /src/sales-orders: { get: { summary: SRC-008 Sales Orders Extract, responses: { '200': { description: ok } } } }
+  /src/fixed-assets: { get: { summary: SRC-009 Fixed Assets Extract, responses: { '200': { description: ok } } } }
+  /src/bank-statements: { get: { summary: SRC-010 Bank Statements Extract, responses: { '200': { description: ok } } } }
+  /src/budget-actual: { get: { summary: SRC-011 Budget vs Actual Extract, responses: { '200': { description: ok } } } }
+  /src/inventory: { get: { summary: SRC-012 Inventory Extract, responses: { '200': { description: ok } } } }
+  /dst/journal-entries: { post: { summary: DST-001 Push Journal Entries, responses: { '202': { description: accepted } } } }
+  /dst/payables: { post: { summary: DST-002 Push Payables, responses: { '202': { description: accepted } } } }
+  /dst/receivables: { post: { summary: DST-003 Push Receivables, responses: { '202': { description: accepted } } } }
+  /dst/cost-centres: { post: { summary: DST-004 Push Cost Centres, responses: { '202': { description: accepted } } } }
+  /dst/profit-centres: { post: { summary: DST-005 Push Profit Centres, responses: { '202': { description: accepted } } } }
+  /dst/material-ledger: { post: { summary: DST-006 Push Material Ledger, responses: { '202': { description: accepted } } } }
+  /dst/purchase-orders: { post: { summary: DST-007 Push Purchase Orders, responses: { '202': { description: accepted } } } }
+  /dst/sales-orders: { post: { summary: DST-008 Push Sales Orders, responses: { '202': { description: accepted } } } }
+  /dst/fixed-assets: { post: { summary: DST-009 Push Fixed Assets, responses: { '202': { description: accepted } } } }
+  /dst/bank-statements: { post: { summary: DST-010 Push Bank Statements, responses: { '202': { description: accepted } } } }
+  /dst/budget-actual: { post: { summary: DST-011 Push Budget vs Actual, responses: { '202': { description: accepted } } } }
+  /dst/inventory: { post: { summary: DST-012 Push Inventory, responses: { '202': { description: accepted } } } }
